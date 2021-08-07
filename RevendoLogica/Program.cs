@@ -7,11 +7,12 @@ namespace RevendoLogica
     {
         static void Main(string[] args)
         {
-            Exercicio1();
-            
+            //Exercicio1();
+            Exercicio2();
+
         }
 
-        
+        /*
         public static void Exercicio1(){
             //Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o 
             //código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
@@ -30,6 +31,20 @@ namespace RevendoLogica
             }
 
             Console.Write("VALOR A PAGAR: " + total.ToString("C"));
+        }
+        */
+
+        public static void Exercicio2()
+        {
+            //Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro 
+            //casas decimais conforme exemplos.
+
+            double area = 0, raio = 0;
+            double PI = Math.PI;
+            Console.Write("Digite o valor do raio: ");
+            raio = double.Parse(Console.ReadLine());
+            area = PI * (raio * raio);
+            Console.WriteLine("O valor da área deste círculo é: " + Math.Round(area, 4));
         }
     }
 }
