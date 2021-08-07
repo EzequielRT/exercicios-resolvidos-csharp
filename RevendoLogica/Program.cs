@@ -8,7 +8,8 @@ namespace RevendoLogica
         static void Main(string[] args)
         {
             //Exercicio1();
-            Exercicio2();
+            //Exercicio2();
+            Exercicio3();
 
         }
 
@@ -34,6 +35,7 @@ namespace RevendoLogica
         }
         */
 
+        /*
         public static void Exercicio2()
         {
             //Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro 
@@ -45,6 +47,58 @@ namespace RevendoLogica
             raio = double.Parse(Console.ReadLine());
             area = PI * (raio * raio);
             Console.WriteLine("O valor da área deste círculo é: " + Math.Round(area, 4));
+        }
+        */
+
+        public static void Exercicio3()
+        {
+            //Com base na tabela de preços, faça um programa que leia o código de um item e a quantidade deste item. A seguir, calcule e
+            //mostre o valor da conta a pagar.
+
+            Console.WriteLine("---------------//---------------");
+            Console.WriteLine("COD 1 - Cachorro Quente - R$ 4,00");
+            Console.WriteLine("COD 2 - X-Salada - R$ 4,50");
+            Console.WriteLine("COD 3 - X-Bacon - R$ 5,00");
+            Console.WriteLine("COD 4 - Torrada Simples - R$ 2,00");
+            Console.WriteLine("COD 5 - Refrigerante - R$ 1,50");
+            Console.WriteLine("---------------//---------------");
+            Console.Write("Digite o COD do item escolhido: ");
+            int cod = int.Parse(Console.ReadLine());
+            Console.Write("Digite a quantidade: ");
+            int qtd = int.Parse(Console.ReadLine());
+
+            decimal valor=0, total=0;
+            switch (cod)
+            {
+                case 1:
+                    valor = 4.00m;
+                    total = valor * qtd;
+                    Console.WriteLine("Total: " + total.ToString("C"));
+                    break;
+                case 2:
+                    valor = 4.50m;
+                    total = valor * qtd;
+                    Console.WriteLine("Total: " + total.ToString("C"));
+                    break;
+                case 3:
+                    valor = 5.00m;
+                    total = valor * qtd;
+                    Console.WriteLine("Total: " + total.ToString("C"));
+                    break;
+                case 4:
+                    valor = 2.00m;
+                    total = valor * qtd;
+                    Console.WriteLine("Total: " + total.ToString("C"));
+                    break;
+                case 5:
+                    valor = 1.50m;
+                    total = valor * qtd;
+                    Console.WriteLine("Total: " + total.ToString("C"));
+                    break;
+                default:
+                    Console.WriteLine("[ERRO] Código inválido!");
+                    break;
+            }
         }
     }
 }
