@@ -9,7 +9,8 @@ namespace RevendoLogica
         {
             //Exercicio1();
             //Exercicio2();
-            Exercicio3();
+            //Exercicio3();
+            Exercicio4();
 
         }
 
@@ -50,6 +51,7 @@ namespace RevendoLogica
         }
         */
 
+        /*
         public static void Exercicio3()
         {
             //Com base na tabela de preços, faça um programa que leia o código de um item e a quantidade deste item. A seguir, calcule e
@@ -99,6 +101,27 @@ namespace RevendoLogica
                     Console.WriteLine("[ERRO] Código inválido!");
                     break;
             }
+        }
+        */
+
+        public static void Exercicio4()
+        {
+            //Escreva um programa que repita a leitura de uma senha até que ela seja válida.Para cada leitura de senha
+            //incorreta informada, escrever a mensagem "Senha Invalida".Quando a senha for informada corretamente deve ser
+            //impressa a mensagem "Acesso Permitido" e o algoritmo encerrado.Considere que a senha correta é o valor 2002.
+
+            int senhaValida = 2002;
+
+            Console.Write("Digite sua senha: ");
+            int senhaDigitada = int.Parse(Console.ReadLine());
+            while (senhaDigitada != senhaValida) 
+            {
+                Console.WriteLine("Senha Invalida!");
+                Console.Write("Digite sua senha: ");
+                senhaDigitada = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Acesso Permitido!");
         }
     }
 }
