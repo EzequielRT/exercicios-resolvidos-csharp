@@ -10,7 +10,8 @@ namespace RevendoLogica
             //Exercicio1();
             //Exercicio2();
             //Exercicio3();
-            Exercicio4();
+            //Exercicio4();
+            Exercicio5();
 
         }
 
@@ -104,6 +105,7 @@ namespace RevendoLogica
         }
         */
 
+        /*
         public static void Exercicio4()
         {
             //Escreva um programa que repita a leitura de uma senha até que ela seja válida.Para cada leitura de senha
@@ -122,6 +124,32 @@ namespace RevendoLogica
             }
 
             Console.WriteLine("Acesso Permitido!");
+        }
+        */
+
+        public static void Exercicio5()
+        {
+            //Leia um valor inteiro N.Este valor será a quantidade de valores inteiros X que serão lidos em seguida.
+            //Mostre quantos destes valores X estão dentro do intervalo[10, 20] e quantos estão fora do intervalo, mostrando
+            //essas informações conforme exemplo(use a palavra "in" para dentro do intervalo, e "out" para fora do intervalo).
+
+            Console.Write("Digite a quantidade de repetições que você deseja: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int In=0, Out=0;
+            for (int i=0;i < n; i++){
+                Console.Write("Digite um valor: ");
+                float valor = float.Parse(Console.ReadLine());
+                if(valor >= 10 && valor <=20){
+                    In++;
+                } else {
+                    Out++;
+                }
+            }
+
+            Console.WriteLine(In + " in");
+            Console.WriteLine(Out + " out");
+
         }
     }
 }
