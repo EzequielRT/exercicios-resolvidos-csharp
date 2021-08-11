@@ -9,7 +9,8 @@ namespace EstruturaSequencial
         {
             //ResolucaoExercicio1();
             //ResolucaoExercicio2();
-            ResolucaoExercicio3();
+            //ResolucaoExercicio3();
+            ResolucaoExercicio4();
         }
 
 
@@ -54,6 +55,24 @@ namespace EstruturaSequencial
             int DIFERENCA = (A * B - C * D);
 
             Console.WriteLine($"DIFERENCA = {DIFERENCA}");
+        }
+        #endregion
+
+        #region Exercicio 4
+        //------------------------------------ Exercicio 4 ------------------------------------
+        //Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que recebe por 
+        //hora e calcula o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, com duas casas
+        //decimais.
+        static void ResolucaoExercicio4()
+        {
+            int numFuncionario = Convert.ToInt32(Console.ReadLine());
+            double horasTrabalhadas = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
+            decimal valorHora = Convert.ToDecimal(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            decimal salario = (decimal)horasTrabalhadas * valorHora;
+
+            Console.WriteLine($"NUMBER = {numFuncionario}");
+            Console.WriteLine($"SALARY = U$ {salario.ToString("F2", CultureInfo.InvariantCulture)}");
         }
         #endregion
 
