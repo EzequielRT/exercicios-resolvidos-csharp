@@ -8,7 +8,8 @@ namespace EstruturaSequencial
         static void Main(string[] args)
         {
             //ResolucaoExercicio1();
-            ResolucaoExercicio2();
+            //ResolucaoExercicio2();
+            ResolucaoExercicio3();
         }
 
 
@@ -37,6 +38,22 @@ namespace EstruturaSequencial
             double PI = 3.14159;
             double area = PI * (raio * raio);
             Console.WriteLine($"A={area.ToString("F4", CultureInfo.InvariantCulture)}");
+        }
+        #endregion
+
+        #region Exercicio 3
+        //------------------------------------ Exercicio 3 ------------------------------------
+        //Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença do produto 
+        //de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A* B - C* D).
+        static void ResolucaoExercicio3()
+        {
+            int A = Convert.ToInt32(Console.ReadLine());
+            int B = Convert.ToInt32(Console.ReadLine());
+            int C = Convert.ToInt32(Console.ReadLine());
+            int D = Convert.ToInt32(Console.ReadLine());
+            int DIFERENCA = (A * B - C * D);
+
+            Console.WriteLine($"DIFERENCA = {DIFERENCA}");
         }
         #endregion
 
