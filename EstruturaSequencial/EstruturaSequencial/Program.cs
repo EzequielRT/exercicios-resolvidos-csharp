@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace EstruturaSequencial
@@ -10,9 +11,9 @@ namespace EstruturaSequencial
             //ResolucaoExercicio1();
             //ResolucaoExercicio2();
             //ResolucaoExercicio3();
-            ResolucaoExercicio4();
+            //ResolucaoExercicio4();
+            ResolucaoExercicio5();
         }
-
 
         #region Exercicio 1
         //------------------------------------ Exercicio 1 ------------------------------------
@@ -73,6 +74,28 @@ namespace EstruturaSequencial
 
             Console.WriteLine($"NUMBER = {numFuncionario}");
             Console.WriteLine($"SALARY = U$ {salario.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+        #endregion
+
+        #region Exercicio 5
+        //------------------------------------ Exercicio 5 ------------------------------------
+        //Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o 
+        //código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
+        static void ResolucaoExercicio5()
+        {
+            double total = 0.0;
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Digite o código da peça, a qtd de peças e o valor unitário de cada peça (tudo na mesma linha. Ex: 12 1 5.30)");
+                string[] valores = Console.ReadLine().Split(" ");
+                int codPeca = Convert.ToInt32(valores[0]);
+                int qtdPecas = Convert.ToInt32(valores[1]);
+                double precoPecas = Convert.ToDouble(valores[2], CultureInfo.InvariantCulture);
+                double valor = qtdPecas * precoPecas;
+                total += valor;
+            }
+
+            Console.WriteLine($"VALOR A PAGAR R$ {total.ToString("F2", CultureInfo.InvariantCulture)}");
         }
         #endregion
 
