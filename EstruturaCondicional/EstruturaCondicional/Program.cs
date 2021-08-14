@@ -7,7 +7,8 @@ namespace EstruturaCondicional
         static void Main(string[] args)
         {
             //ResolucaoExercicio1();
-            ResolucaoExercicio2();
+            //ResolucaoExercicio2();
+            ResolucaoExercicio3();
         }
 
         #region Exercicio 1
@@ -47,6 +48,35 @@ namespace EstruturaCondicional
             {
                 Console.WriteLine("NAO NEGATIVO");
             }
+        }
+        #endregion
+
+        #region Exercicio 3
+        //------------------------------------ Exercicio 3 ------------------------------------
+        //Leia 2 valores inteiros(A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou "Nao sao 
+        //Multiplos", indicando se os valores lidos são múltiplos entre si. Atenção: os números devem poder ser digitados em 
+        //ordem crescente ou decrescente.
+        static void ResolucaoExercicio3()
+        {
+
+            Console.Write("Digite dois valores inteiros para saber se são múltiplos ou não (Ex: 4 2): ");
+
+            string[] numeros = Console.ReadLine().Split(" ");
+            int A = Convert.ToInt32(numeros[0]);
+            int B = Convert.ToInt32(numeros[1]);
+
+            int soma = A + B;
+
+            if (soma % 2 == 0)
+            {
+                Console.WriteLine("SAO MULTIPLOS");
+            }
+            else
+            {
+                Console.WriteLine("NÃO SAO MULTIPLOS");
+            }
+
+            
         }
         #endregion
     }
