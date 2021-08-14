@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace EstruturaCondicional
 {
@@ -9,7 +10,8 @@ namespace EstruturaCondicional
             //ResolucaoExercicio1();
             //ResolucaoExercicio2();
             //ResolucaoExercicio3();
-            ResolucaoExercicio4();
+            //ResolucaoExercicio4();
+            ResolucaoExercicio5();
         }
 
         #region Exercicio 1
@@ -104,6 +106,62 @@ namespace EstruturaCondicional
 
             Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
 
+        }
+        #endregion
+
+        #region Exercicio 5
+        //------------------------------------ Exercicio 5 ------------------------------------
+        //Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A 
+        //seguir, calcule e mostre o valor da conta a pagar.
+        static void ResolucaoExercicio5()
+        {
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("COD 1 - Hot-Dog - R$ 4.00");
+            Console.WriteLine("COD 2 - X-Salada - R$ 4.50");
+            Console.WriteLine("COD 3 - X-Bacon - R$ 5.00");
+            Console.WriteLine("COD 4 - Torrada - R$ 2.00");
+            Console.WriteLine("COD 5 - Refri - R$ 1.50");
+            Console.WriteLine("-----------------------------");
+
+            Console.WriteLine("Digite o cod do produto e a qtd de itens (Ex: 1 3): ");
+            string[] produtos = Console.ReadLine().Split(" ");
+
+            int cod = Convert.ToInt16(produtos[0]);
+            int qtd = Convert.ToInt16(produtos[1]);
+            double preco = 0.0;
+            double total = 0.0;
+
+            if (cod == 1)
+            {
+                preco = 4.00;
+                total = preco * qtd;
+            }
+            else if (cod == 2)
+            {
+                preco = 4.50;
+                total = preco * qtd;
+            }
+            else if (cod == 3)
+            {
+                preco = 5.00;
+                total = preco * qtd;
+            }
+            else if (cod == 4)
+            {
+                preco = 2.00;
+                total = preco * qtd;
+            }
+            else if (cod == 5)
+            {
+                preco = 1.50;
+                total = preco * qtd;
+            }
+            else
+            {
+                Console.WriteLine("[ERRO]Código inválido!");
+            }
+
+            Console.WriteLine($"Total: R$ {total.ToString("F2", CultureInfo.InvariantCulture)}");
         }
         #endregion
     }
