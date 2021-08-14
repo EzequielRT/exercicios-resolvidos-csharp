@@ -8,7 +8,8 @@ namespace EstruturaCondicional
         {
             //ResolucaoExercicio1();
             //ResolucaoExercicio2();
-            ResolucaoExercicio3();
+            //ResolucaoExercicio3();
+            ResolucaoExercicio4();
         }
 
         #region Exercicio 1
@@ -77,6 +78,32 @@ namespace EstruturaCondicional
             }
 
             
+        }
+        #endregion
+
+        #region Exercicio 4
+        //------------------------------------ Exercicio 4 ------------------------------------
+        //Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode 
+        //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas
+        static void ResolucaoExercicio4()
+        {
+            Console.Write("Digite a hora inicial e final do jogo (Ex: 16 2): ");
+            string[] horas = Console.ReadLine().Split(" ");
+            int hrInicial = Convert.ToInt32(horas[0]);
+            int hrFinal = Convert.ToInt32(horas[1]);
+
+            int duracao = 0;
+            if (hrInicial < hrFinal)
+            {
+                duracao = hrFinal - hrInicial;
+            }
+            else
+            {
+                duracao = 24 - hrInicial + hrFinal;
+            }
+
+            Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
+
         }
         #endregion
     }
