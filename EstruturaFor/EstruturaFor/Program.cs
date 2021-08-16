@@ -9,7 +9,8 @@ namespace EstruturaFor
         {
             //ResolucaoExercicio1();
             //ResolucaoExercicio2();
-            ResolucaoExercicio3();
+            //ResolucaoExercicio3();
+            ResolucaoExercicio4();
         }
 
         #region Exercicio 1
@@ -38,7 +39,7 @@ namespace EstruturaFor
         //essas informações conforme exemplo(use a palavra "in" para dentro do intervalo, e "out" para fora do intervalo).
         static void ResolucaoExercicio2()
         {
-            Console.Write("Digite a qtd de numeros que serão digitados: ");
+            Console.Write("Digite a qtd de vzs que sera repetido:: ");
             int N = Convert.ToInt32(Console.ReadLine());
 
             int count_in = 0, count_out = 0;
@@ -83,6 +84,36 @@ namespace EstruturaFor
                 double mediaPonderada = (n1 * 2.0 + n2 * 3.0 + n3 * 5.0) / 10.0;
 
                 Console.WriteLine(mediaPonderada.ToString("F1", CultureInfo.InvariantCulture));
+            }
+        }
+        #endregion
+
+        #region Exercicio 4
+        //------------------------------------ Exercicio 4 ------------------------------------
+        //Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro pelo 
+        //segundo. Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".
+        static void ResolucaoExercicio4()
+        {
+            Console.Write("Digite a qtd de vzs que sera repetido: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                Console.WriteLine("Digite os 2 valores que deseja saber a divisão:");
+                string[] valores = Console.ReadLine().Split(" ");
+                double n1 = Convert.ToDouble(valores[0], CultureInfo.InvariantCulture);
+                double n2 = Convert.ToDouble(valores[1], CultureInfo.InvariantCulture);
+
+                if (n2 == 0)
+                {
+                    Console.WriteLine("Divisao impossivel");
+                }
+                else
+                {
+                    double divisao = n1 / n2;
+                    Console.WriteLine(divisao.ToString("F1", CultureInfo.InvariantCulture));
+                }
+
             }
         }
         #endregion
