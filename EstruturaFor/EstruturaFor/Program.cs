@@ -12,7 +12,8 @@ namespace EstruturaFor
             //ResolucaoExercicio3();
             //ResolucaoExercicio4();
             //ResolucaoExercicio5();
-            ResolucaoExercicio6();
+            //ResolucaoExercicio6();
+            ResolucaoExercicio7();
         }
 
         #region Exercicio 1
@@ -161,6 +162,26 @@ namespace EstruturaFor
                 {
                     Console.WriteLine(i);
                 }
+            }
+        }
+        #endregion
+
+        #region Exercicio 7
+        //------------------------------------ Exercicio 7 ------------------------------------
+        //Fazer um programa para ler um número inteiro positivo N.O programa deve então mostrar na tela N linhas,
+        //começando de 1 até N. Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme
+        //exemplo.
+        static void ResolucaoExercicio7()
+        {
+            Console.Write("Digite um numero: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                int quadrado = (int)Math.Pow(i, 2);
+                int cubo = (int)Math.Pow(i, 3);
+
+                Console.WriteLine($"{i} {quadrado} {cubo}");
             }
         }
         #endregion
