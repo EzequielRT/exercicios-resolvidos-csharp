@@ -11,7 +11,8 @@ namespace EstruturaFor
             //ResolucaoExercicio2();
             //ResolucaoExercicio3();
             //ResolucaoExercicio4();
-            ResolucaoExercicio5();
+            //ResolucaoExercicio5();
+            ResolucaoExercicio6();
         }
 
         #region Exercicio 1
@@ -143,6 +144,24 @@ namespace EstruturaFor
             }
 
             Console.WriteLine(fatorial);
+        }
+        #endregion
+
+        #region Exercicio 6
+        //------------------------------------ Exercicio 6 ------------------------------------
+        //Ler um número inteiro N e calcular todos os seus divisores.
+        static void ResolucaoExercicio6()
+        {
+            Console.Write("Digite o numero que deseja saber os seus divisores: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (N % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
         #endregion
     }
